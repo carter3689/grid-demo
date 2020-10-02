@@ -1,0 +1,86 @@
+.grid-wrapper{
+    /* Display a grid using this class */
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    /* grid-template-rows == gridRows
+       grid-template-columns == gridColumns
+    */
+    grid-template-rows: 2fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "clearbutton searchbar searchbar"
+        "category    products  products"
+        "category    products  products"
+        "price       products  products";
+}
+
+.clearbutton{
+    grid-area: clearbutton;
+    background-color: red;
+}
+
+.clearbutton button{
+    width: 50%;
+    display: block;
+    margin: 4vh auto;
+    padding: 10px;
+    border-radius: 3px;
+    border: 2px solid #64B5F6;
+    background-color: #64B5F6;
+}
+
+.category{
+    grid-area: category;
+    background-color: orange;
+}
+
+.category input[type="checkbox"]{
+    display:block;
+    margin: 20px 20px;
+}
+
+label.indented-checkbox-text{
+    margin-left: 2em;
+    display: block;
+    position: relative;
+    margin-top: -1.4em;
+    line-height: 1.4em;
+    transform: translate(.5vw, -5vh);
+}
+
+/* Searchbox grid area */
+
+.searchbar{
+    grid-area: searchbar;
+}
+
+.searchbar input[type="text"]{
+    width: 50%;
+    padding: 10px;
+    margin: 4vh auto;
+    display: block;
+}
+
+/* Products grid area */
+.products{
+    grid-area: products;
+}
+
+.product{
+    border: 4px solid black;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Price grid area */
+.price{
+    grid-area: price;
+    background-color: yellow;
+}
+
+.price input[type="checkbox"], label{
+    margin: 10px;
+    font-size: 18px;
+}
+
